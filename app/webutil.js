@@ -205,7 +205,7 @@ function logOnce(msg, level = "warn") {
     }
 }
 
-let cookiesMsg = "Couldn't access noVNC settings, are cookies disabled?";
+let cookiesMsg = "Couldn't access NexusControl settings, are cookies disabled?";
 
 function localStorageGet(name) {
     let r;

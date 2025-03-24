@@ -18,7 +18,7 @@ import Keyboard from "../core/input/keyboard.js";
 import RFB from "../core/rfb.js";
 import * as WebUtil from "./webutil.js";
 
-const PAGE_TITLE = "noVNC";
+const PAGE_TITLE = "NexusControl";
 
 const LINGUAS = ["cs", "de", "el", "es", "fr", "it", "ja", "ko", "nl", "pl", "pt_BR", "ru", "sv", "tr", "zh_CN", "zh_TW"];
 
@@ -400,10 +400,10 @@ const UI = {
     // Disable/enable controls depending on connection state
     updateVisualState(state) {
 
-        document.documentElement.classList.remove("noVNC_connecting");
-        document.documentElement.classList.remove("noVNC_connected");
-        document.documentElement.classList.remove("noVNC_disconnecting");
-        document.documentElement.classList.remove("noVNC_reconnecting");
+        document.documentElement.classList.remove("NexusControl_connecting");
+        document.documentElement.classList.remove("NexusControl_connected");
+        document.documentElement.classList.remove("NexusControl_disconnecting");
+        document.documentElement.classList.remove("NexusControl_reconnecting");
 
         const transitionElem = document.getElementById("noVNC_transition_text");
         switch (state) {
@@ -411,20 +411,20 @@ const UI = {
                 break;
             case 'connecting':
                 transitionElem.textContent = _("Connecting...");
-                document.documentElement.classList.add("noVNC_connecting");
+                document.documentElement.classList.add("NexusControl_connecting");
                 break;
             case 'connected':
-                document.documentElement.classList.add("noVNC_connected");
+                document.documentElement.classList.add("NexusControl_connected");
                 break;
             case 'disconnecting':
                 transitionElem.textContent = _("Disconnecting...");
-                document.documentElement.classList.add("noVNC_disconnecting");
+                document.documentElement.classList.add("NexusControl_disconnecting");
                 break;
             case 'disconnected':
                 break;
             case 'reconnecting':
                 transitionElem.textContent = _("Reconnecting...");
-                document.documentElement.classList.add("noVNC_reconnecting");
+                document.documentElement.classList.add("NexusControl_reconnecting");
                 break;
             default:
                 Log.Error("Invalid visual state: " + state);
