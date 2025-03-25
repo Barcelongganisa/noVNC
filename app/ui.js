@@ -1,4 +1,4 @@
-/*
+git /*
  * noVNC: HTML5 VNC client
  * Copyright (C) 2019 The noVNC authors
  * Licensed under MPL 2.0 (see LICENSE.txt)
